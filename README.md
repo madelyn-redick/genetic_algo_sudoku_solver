@@ -1,1 +1,1 @@
-# genetic_algo_sudoku_solver
+# AI Sudoku Solver
