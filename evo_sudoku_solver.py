@@ -894,9 +894,9 @@ def main():
     mutate = [True for i in range(30)]
 
     # randomly choose 30 of each type
-    selected_easy = list(np.random.choice(easy_ind, size=14, replace=False))
-    selected_medium = list(np.random.choice(medium_ind, size=14, replace=False))
-    selected_hard = list(np.random.choice(hard_ind, size=14, replace=False))
+    selected_easy = list(np.random.choice(easy_ind, size=30, replace=False))
+    selected_medium = list(np.random.choice(medium_ind, size=30, replace=False))
+    selected_hard = list(np.random.choice(hard_ind, size=30, replace=False))
 
     # run algorithm
     hill_easy_results = compare_puzzles(selected_easy, puzzles, solutions, pop_sizes, generations, mutations=mutate, hills=hills)
@@ -914,9 +914,9 @@ def main():
     hills = [False for i in range(30)]
 
     # randomly choose 30 of each type
-    selected_easy = list(np.random.choice(easy_ind, size=14, replace=False))
-    selected_medium = list(np.random.choice(medium_ind, size=14, replace=False))
-    selected_hard = list(np.random.choice(hard_ind, size=14, replace=False))
+    selected_easy = list(np.random.choice(easy_ind, size=30, replace=False))
+    selected_medium = list(np.random.choice(medium_ind, size=30, replace=False))
+    selected_hard = list(np.random.choice(hard_ind, size=30, replace=False))
 
     # run algorithm
     same_params_easy_results = compare_puzzles(selected_easy, puzzles, solutions, pop_sizes, generations, mutations=mutate, hills=hills)
@@ -924,7 +924,7 @@ def main():
     same_params_med_results = compare_puzzles(selected_medium, puzzles, solutions, pop_sizes, generations, mutations=mutate, hills=hills)
     plot_compare_puzzles(same_params_med_results, puzzles, solutions, fig_title="30_baseline_MEDIUM")
     same_params_hard_results = compare_puzzles(selected_hard, puzzles, solutions, pop_sizes, generations, mutations=mutate, hills=hills)
-    plot_compare_puzzles(same_params_hard_results, puzzles, solutions, fig_title="14_baseline_HARD")
+    plot_compare_puzzles(same_params_hard_results, puzzles, solutions, fig_title="30_baseline_HARD")
 
 
 
